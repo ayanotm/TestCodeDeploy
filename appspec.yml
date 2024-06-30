@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /TestCodeDeploy
     destination: /usr/share/nginx/html
 file_exists_behavior: OVERWRITE
 permissions:
