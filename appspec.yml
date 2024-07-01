@@ -1,37 +1,37 @@
 version: 0.0
 os: linux
 files:
-  - source: /TestCodeDeploy
+  - source: /
     destination: /usr/share/nginx/html
 file_exists_behavior: OVERWRITE
 permissions:
   - object: /usr/share/nginx/html
     pattern: "**"
-    #owner: ec2-user
-    #group: apache
+    owner: ec2-user
+    group: apache
     except: [/usr/share/nginx/html/storage]
     type:
       - file
     mode: 644
   - object: /usr/share/nginx/html
     pattern: "**"
-    #owner: ec2-user
-    #group: apache
+    owner: ec2-user
+    group: apache
     except: [/usr/share/nginx/html/storage]
     type:
       - directory
     mode: 755
   - object: /usr/share/nginx/html/storage
     pattern: "**"
-    #owner: ec2-user
-    #group: apache
+    owner: ec2-user
+    group: apache
     type:
       - file
     mode: 775
   - object: /usr/share/nginx/html/storage
     pattern: "**"
-    #owner: ec2-user
-    #group: apache
+    owner: ec2-user
+    group: apache
     type:
       - directory
     mode: 775
